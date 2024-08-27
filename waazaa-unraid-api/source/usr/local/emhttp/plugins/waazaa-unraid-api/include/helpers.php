@@ -20,7 +20,8 @@ function start() {
 }
 
 function stop() {
-    $command    = "killall waazaa-unraid-api);
+    $command    = "killall waazaa-unraid-api";
+    $output     = shell_exec($command);
     return true;
 }
 
