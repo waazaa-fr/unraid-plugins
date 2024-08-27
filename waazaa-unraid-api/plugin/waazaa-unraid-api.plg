@@ -1,0 +1,63 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "waazaa-unraid-api">
+<!ENTITY author    "waazaa">
+<!ENTITY version   "2024.08.27">
+<!ENTITY launch    "Settings/waazaa-unraid-api">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/waazaa-unraid-api.plg">
+<!ENTITY plgPATH   "/boot/config/plugins/waazaa-unraid-api">
+<!ENTITY plgNAME   "waazaa-unraid-api-2024.08.27-x86_64-1">
+<!ENTITY plgMD5    "aefb461fe7cefdf2f73976b3d979cf24">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/waazaa-unraid-api">
+]>
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="https://discord.gg/p9xkjEw8ts" min="6.8.3" icon="gears">
+<CHANGES>
+## &name; for UNRAID
+### &version;
+- Initial release of the plugin.
+</CHANGES>
+
+<!-- Kill api running processes-->
+<FILE Run="/bin/bash">
+<INLINE>
+killall waazaa-unraid-api
+exit 0
+</INLINE>
+</FILE>
+
+<!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
+<FILE Name="waazaa-unraid-api-2024-08-27-x86_64-1.txz" Min="6.8.3" Run="upgradepkg --install-new">
+<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/waazaa-unraid-api-2024-08-27-x86_64-1.txz</URL>
+<MD5>&plgMD5;</MD5>
+</FILE>
+
+<!-- Informe successfull installation-->
+<FILE Run="/bin/bash">
+<INLINE>
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; Plugin for UNRAID has been installed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<!-- Uninstallation method-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+removepkg waazaa-unraid-api-2024-08-27-x86_64-1
+rm -rf /boot/config/plugins/&name;*
+rm -rf /usr/local/emhttp/plugins/&name;*
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; Plugin for UNRAID has been removed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>
