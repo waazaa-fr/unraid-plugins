@@ -18,7 +18,7 @@
 - Initial release of the plugin.
 </CHANGES>
 
-<!-- Kill api running processes-->
+
 <FILE Run="/bin/bash">
 <INLINE>
 killall waazaa-unraid-api
@@ -26,13 +26,13 @@ exit 0
 </INLINE>
 </FILE>
 
-<!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
+
 <FILE Name="waazaa-unraid-api-2024-08-27-x86_64.txz" Min="6.8.3" Run="upgradepkg --install-new">
 <URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/waazaa-unraid-api/packages/waazaa-unraid-api-2024-08-27-x86_64.txz</URL>
 <MD5>&plgMD5;</MD5>
 </FILE>
 
-<!-- Informe successfull installation-->
+
 <FILE Run="/bin/bash">
 <INLINE>
 echo ""
@@ -44,7 +44,7 @@ echo ""
 </INLINE>
 </FILE>
 
-<!-- Uninstallation method-->
+
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 removepkg waazaa-unraid-api-2024-08-27-x86_64
