@@ -7,7 +7,7 @@
 <!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
-<!ENTITY plgNAME   "&name;-&version;-x86_64-1">
+<!ENTITY plgNAME   "unraid-api-2024-08-27-x86_64-1">
 <!ENTITY plgMD5    "9663c88339a8711db3b83dc36b067db4">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
@@ -47,7 +47,7 @@ echo ""
 <!-- Uninstallation method-->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-removepkg &plgNAME;
+removepkg unraid-api-2024-08-27-x86_64-1
 rm -rf /boot/config/plugins/&name;*
 rm -rf /usr/local/emhttp/plugins/&name;*
 
