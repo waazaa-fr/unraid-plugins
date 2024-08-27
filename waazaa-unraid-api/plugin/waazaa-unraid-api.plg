@@ -4,10 +4,10 @@
 <!ENTITY author    "waazaa">
 <!ENTITY version   "2024.08.27">
 <!ENTITY launch    "Settings/waazaa-unraid-api">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/waazaa-unraid-api.plg">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/waazaa-unraid-api">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/waazaa-unraid-api/plugin/waazaa-unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/waazaa-unraid-api">
-<!ENTITY plgNAME   "waazaa-unraid-api-2024.08.27-x86_64-1">
+<!ENTITY plgNAME   "waazaa-unraid-api-2024-08-27-x86_64">
 <!ENTITY plgMD5    "aefb461fe7cefdf2f73976b3d979cf24">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/waazaa-unraid-api">
 ]>
@@ -27,8 +27,8 @@ exit 0
 </FILE>
 
 <!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
-<FILE Name="waazaa-unraid-api-2024-08-27-x86_64-1.txz" Min="6.8.3" Run="upgradepkg --install-new">
-<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/waazaa-unraid-api-2024-08-27-x86_64-1.txz</URL>
+<FILE Name="waazaa-unraid-api-2024-08-27-x86_64.txz" Min="6.8.3" Run="upgradepkg --install-new">
+<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/waazaa-unraid-api/packages/waazaa-unraid-api-2024-08-27-x86_64.txz</URL>
 <MD5>&plgMD5;</MD5>
 </FILE>
 
@@ -47,7 +47,7 @@ echo ""
 <!-- Uninstallation method-->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-removepkg waazaa-unraid-api-2024-08-27-x86_64-1
+removepkg waazaa-unraid-api-2024-08-27-x86_64
 rm -rf /boot/config/plugins/&name;*
 rm -rf /usr/local/emhttp/plugins/&name;*
 
