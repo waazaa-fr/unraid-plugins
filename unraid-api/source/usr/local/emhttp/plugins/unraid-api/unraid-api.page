@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateStatus() {
         console.log('Fetching API status...');
-        fetch('/plugins/myapi-plugin/include/actions.php?action=isApiRunning')
+        fetch('/plugins/unraid-api/include/actions.php?action=isApiRunning')
             .then(response => response.json())
             .then(data => {
                 console.log('API status response data:', data);
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         controlBtn.disabled = true;
 
         console.log(`${action.charAt(0).toUpperCase() + action.slice(1)}ing API...`);
-        fetch(`/plugins/myapi-plugin/include/actions.php?action=${action}`)
+        fetch(`/plugins/unraid-api/include/actions.php?action=${action}`)
             .then(response => response.json())
             .then(data => {
                 console.log(`${action.charAt(0).toUpperCase() + action.slice(1)} API response data:`, data);
