@@ -8,7 +8,7 @@
 <!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/waazaa-unraid-api/plugin/waazaa-unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/waazaa-unraid-api">
 <!ENTITY plgNAME   "waazaa-unraid-api-2024-08-27-x86_64">
-<!ENTITY plgMD5    "22d87d1fb2dd59d3ad705822ce0adbacc">
+<!ENTITY plgMD5    "22d87d1fb2dd59d3ad705822ce0adbac">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/waazaa-unraid-api">
 ]>
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="https://discord.gg/p9xkjEw8ts" min="6.8.3" icon="gears">
