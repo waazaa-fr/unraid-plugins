@@ -5,7 +5,7 @@
 <!ENTITY version   "2024.08.27">
 <!ENTITY launch    "Settings/unraid-api">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/&name;">
-<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
 <!ENTITY plgNAME   "&name;-&version;-x86_64-1">
 <!ENTITY plgMD5    "9663c88339a8711db3b83dc36b067db4">
@@ -28,7 +28,7 @@ exit 0
 
 <!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
 <FILE Name="&plgPATH;/&plgNAME;.txz" Min="6.8.3" Run="upgradepkg --install-new">
-<URL>&gitURL;/packages/&plgNAME;.txz</URL>
+<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/unraid-api-2024-08-27-x86_64-1.txz</URL>
 <MD5>&plgMD5;</MD5>
 </FILE>
 
