@@ -47,7 +47,7 @@ echo ""
 <!-- Uninstallation method-->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-removepkg unraid-api-2024-08-27-x86_64-1
+removepkg unraid-api-2024-08-27-x86_64
 rm -rf /boot/config/plugins/&name;*
 rm -rf /usr/local/emhttp/plugins/&name;*
 
