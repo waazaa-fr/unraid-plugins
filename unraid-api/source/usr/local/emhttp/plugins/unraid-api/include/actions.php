@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-require_once '/usr/local/emhttp/plugins/myapi-plugin/include/helpers.php';
+require_once '/usr/local/emhttp/plugins/unraid-api/include/helpers.php';
 
 // Log the action received
 $action = isset($_GET['action']) ? $_GET['action'] : '';
