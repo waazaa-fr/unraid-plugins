@@ -3,7 +3,7 @@
 
 function isApiRunning() {
     // Utiliser la commande ps pour lister les processus et grep pour rechercher le nom du processus
-    $command = "ps aux | grep 'myapi' | grep -v grep";
+    $command = "ps aux | grep 'unraid-api' | grep -v grep";
     $output = shell_exec($command);
 
     // Si la sortie n'est pas vide, le processus est en cours d'exécution
@@ -14,13 +14,13 @@ function isApiRunning() {
 }
 
 function start() {
-    $command    = "myapi";
+    $command    = "unraid-api";
     $output     = shell_exec($command);
     return true;
 }
 
 function stop() {
-    $command    = "killall myapi";
+    $command    = "killall unraid-api";
     $output     = shell_exec($command);
     return true;
 }
