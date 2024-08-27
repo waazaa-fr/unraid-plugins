@@ -1,0 +1,63 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "unraid-api">
+<!ENTITY author    "waazaa">
+<!ENTITY version   "2024.08.27">
+<!ENTITY launch    "Settings/unraid-api">
+<!ENTITY gitURL    "https://git.waazaa.fr/waazaa/unraid-plugins/raw/branch/main/&name;">
+<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY plgNAME   "&name;-&version;-x86_64-1">
+<!ENTITY plgMD5    "9663c88339a8711db3b83dc36b067db4">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+]>
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="https://forums.unraid.net/topic/168125-plugin-live-memory-tester-for-unraid/" min="6.8.3" icon="gear">
+<CHANGES>
+## &name; for UNRAID
+### &version;
+- Initial release of the plugin.
+</CHANGES>
+
+<!-- Kill api running processes-->
+<FILE Run="/bin/bash">
+<INLINE>
+killall unraid-api
+exit 0
+</INLINE>
+</FILE>
+
+<!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
+<FILE Name="&plgPATH;/&plgNAME;.txz" Min="6.8.3" Run="upgradepkg --install-new">
+<URL>&gitURL;/packages/&plgNAME;.txz</URL>
+<MD5>&plgMD5;</MD5>
+</FILE>
+
+<!-- Informe successfull installation-->
+<FILE Run="/bin/bash">
+<INLINE>
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; Plugin for UNRAID has been installed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<!-- Uninstallation method-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+removepkg &plgNAME;
+rm -rf /boot/config/plugins/&name;*
+rm -rf /usr/local/emhttp/plugins/&name;*
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; Plugin for UNRAID has been removed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>
