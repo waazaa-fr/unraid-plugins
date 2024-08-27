@@ -4,14 +4,14 @@
 <!ENTITY author    "waazaa">
 <!ENTITY version   "2024.08.27">
 <!ENTITY launch    "Settings/unraid-api">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/&name;">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/unraid-api.plg">
-<!ENTITY plgPATH   "/boot/config/plugins/&name;">
-<!ENTITY plgNAME   "unraid-api-2024-08-27-x86_64-1">
+<!ENTITY plgPATH   "/boot/config/plugins/unraid-api">
+<!ENTITY plgNAME   "unraid-api-2024.08.27-x86_64-1">
 <!ENTITY plgMD5    "9663c88339a8711db3b83dc36b067db4">
-<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/unraid-api">
 ]>
-<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="https://forums.unraid.net/topic/168125-plugin-live-memory-tester-for-unraid/" min="6.8.3" icon="gear">
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="https://discord.gg/p9xkjEw8ts" min="6.8.3" icon="gear">
 <CHANGES>
 ## &name; for UNRAID
 ### &version;
@@ -27,7 +27,7 @@ exit 0
 </FILE>
 
 <!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
-<FILE Name="&plgPATH;/&plgNAME;.txz" Min="6.8.3" Run="upgradepkg --install-new">
+<FILE Name="unraid-api-2024-08-27-x86_64-1.txz" Min="6.8.3" Run="upgradepkg --install-new">
 <URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/unraid-api-2024-08-27-x86_64-1.txz</URL>
 <MD5>&plgMD5;</MD5>
 </FILE>
