@@ -7,7 +7,7 @@
 <!ENTITY gitURL    "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/waazaa-fr/unraid-plugins/main/unraid-api/plugin/unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/unraid-api">
-<!ENTITY plgNAME   "unraid-api-2024.08.27-x86_64">
+<!ENTITY plgNAME   "unraid-api-2024.08.27-x86_64-1">
 <!ENTITY plgMD5    "aefb461fe7cefdf2f73976b3d979cf24">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/unraid-api">
 ]>
@@ -27,8 +27,8 @@ exit 0
 </FILE>
 
 <!-- Install the .txz from :boot/foncig/plugins/&name;.txz to put files on /usr/loca:emhttp/plugins/&name; and /usr/local/bin-->
-<FILE Name="unraid-api-2024-08-27-x86_64.txz" Min="6.8.3" Run="upgradepkg --install-new">
-<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/unraid-api-2024-08-27-x86_64.txz</URL>
+<FILE Name="unraid-api-2024-08-27-x86_64-1.txz" Min="6.8.3" Run="upgradepkg --install-new">
+<URL>https://github.com/waazaa-fr/unraid-plugins/raw/main/unraid-api/packages/unraid-api-2024-08-27-x86_64-1.txz</URL>
 <MD5>&plgMD5;</MD5>
 </FILE>
 
@@ -47,7 +47,7 @@ echo ""
 <!-- Uninstallation method-->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-removepkg unraid-api-2024-08-27-x86_64
+removepkg unraid-api-2024-08-27-x86_64-1
 rm -rf /boot/config/plugins/&name;*
 rm -rf /usr/local/emhttp/plugins/&name;*
 
