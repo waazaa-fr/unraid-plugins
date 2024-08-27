@@ -1,8 +1,8 @@
 Menu="Utilities"
 Type="xmenu"
 Title="unraid-api"
-Icon="gear"
-Tag="gear"
+Icon="gears"
+Tag="gears"
 Markdown="false"
 ---
 <?
