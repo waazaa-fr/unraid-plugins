@@ -7,7 +7,7 @@
 <!ENTITY gitURL    "https://github.com/waazaa-fr/unraid-plugins/raw/main/waazaa-unraid-api">
 <!ENTITY pluginURL "https://github.com/waazaa-fr/unraid-plugins/raw/main/waazaa-unraid-api/plugin/waazaa-unraid-api.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/waazaa-unraid-api">
-<!ENTITY plgNAME   "waazaa-unraid-api-2024.08.27-x86_64">
+<!ENTITY plgNAME   "waazaa-unraid-api-2024-08-27-x86_64">
 <!ENTITY plgMD5    "22d87d1fb2dd59d3ad705822ce0adbac">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/waazaa-unraid-api">
 ]>
